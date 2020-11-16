@@ -36,10 +36,10 @@ describe('GET Filme', () => {
 
     it('Validar request mensagem de erro', () => {
 
-        var id = '000000'
+
         cy.request({
         method: 'GET',
-        url: `?i=${id}&apikey=${API_KEY}`
+        url: `?i=0000&apikey=${API_KEY}`
         
         }).then((response) => {
         expect(response.body.Response).to.eq('False')
